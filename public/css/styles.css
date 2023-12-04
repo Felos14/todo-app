@@ -69,6 +69,12 @@ header div div {
     margin-bottom: 2.5rem;
 }
 
+header button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}    
+
 header div h1 {
     color: #ffff;
     text-transform: uppercase;
@@ -100,7 +106,7 @@ header form button {
     border-radius: 0.3125rem;
     border: none;
     background: var(--button-color);
-    color: #ffff;
+    color: #fff;
 }
 
 main {
@@ -179,6 +185,7 @@ main {
 .botoes .active {
     color: var(--info-button-active);
 }
+
 @media(min-width: 1000px) {
     header {
         background-image: var(--bg-header-desktop);
