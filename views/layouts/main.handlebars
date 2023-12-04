@@ -10,17 +10,17 @@
     
     <title>TODO APP</title>
 </head>
-<body class="dark">
+<body class="">
     <header>
         <div>
             <div>
                 <h1>To Do</h1>
-                <button onclick="alterarTema()" class="tema-button">
+                <button type="submit" onclick="alterarTema()" class="tema-button">
                     <img src="/imagens/moon-icon.png" alt="icone de lua">
                 </button>
             </div>
-            <form action="">
-                <input type="text" id="nova-tarefa" placeholder="Criar uma nova tarefa" name="novaTarefa">
+            <form action="/criar" method="post">
+                <input type="text" id="descricao" placeholder="Criar uma nova tarefa" name="descricao">
                 <button>Criar</button>
             </form>
         </div>
