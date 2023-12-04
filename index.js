@@ -36,7 +36,7 @@ app.post('/criar', (requisicao, resposta) => {
 
 
 app.get('/', (requisicao, resposta) => {
-    const sql = `select * from tarefas`
+    const sql = 'select * from tarefas'
 
     conexao.query(sql, (erro, dados) => {
         if (erro) {
@@ -52,9 +52,14 @@ app.get('/', (requisicao, resposta) => {
             }
         })
 
+        const tarefasAtivas = tarefas.filter((tarefa) => {
+            return tarefa.completa === false && tarefa
+        })
+
+        const quantidadeTarefasAtivas = tarefasAtivas.length
+
+        resposta.render("home", { tarefas, quantidadeTarefasAtivas })
     })
-    
-    resposta.render('home')
 })
 
 const conexao = mysql.createConnection({
