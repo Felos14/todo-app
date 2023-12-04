@@ -10,6 +10,8 @@
     --input-box-shadow: rgba(193.64, 195.16, 213.56, 0.50);
     --input-color: #494c6b;
     --button-collor: #494c6b;
+    --bg-main: #FAFAFA;
+    --bg-tarefas: #fff;
 
 }
 header {
@@ -49,4 +51,13 @@ header form button {
     border: none;
     background: var(--button-collor);
     color: #ffff;
+}
+
+main {
+    background: var(--bg-main);
+    min-height: calc(100vh - 12.5rem);
+}
+
+.tarefas {
+    background: var(--bg-tarefas);
 }
